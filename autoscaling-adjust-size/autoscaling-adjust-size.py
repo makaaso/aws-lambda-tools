@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding:utf-8 -*-
 #
-#[aws-lambda-autoscale-adjust-size.py]
+#[autoscale-adjust-size.py]
 #
 #Copyright (c) 2015 Masaru Kawabata
 #
