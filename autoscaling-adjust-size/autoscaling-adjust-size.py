@@ -14,6 +14,14 @@
 
 [機能]
  - AWS-LambdaのCron機能を利用して、AutoScalingGroupの起動台数を調整する
+
+[スクリプトを使用する前に]
+ - このまま実行するとエラーになります
+ - 以下の箇所を修正する必要があります
+   - <VAL1>/<VAL2>... 変更したい台数
+   - <Region>... Region識別子
+   - <AutoScalingGroup>... AutoScalingGroup名
+ - 関数を追加した場合はコピーする
 """
 
 __authour__ = "masaru.kawabata"
@@ -21,7 +29,7 @@ __version__ = 0.1
 
 import boto3
 
-def minsizeXXX(event, context):
+def minsize<VAL1>(event, context):
     """
     AutoScalingGroup起動台数調整
     """
@@ -35,14 +43,14 @@ def minsizeXXX(event, context):
 
     """ Update AutoScalingGroup """
     try:
-        client.update_auto_scaling_group(AutoScalingGroupName = '<AutoScalingGroup>', MinSize = XXX, DesiredCapacity = XXX)
+        client.update_auto_scaling_group(AutoScalingGroupName = '<AutoScalingGroup>', MinSize = <VAL1>, DesiredCapacity = <VAL1>)
     except: 
         print('Update AutoScalingGroup Error')
         return 1
 
     return 0
 
-def minsizeYYY(event, context):
+def minsize<VAL2>(event, context):
     """
     AutoScalingGroup起動台数調整
     """
@@ -56,7 +64,7 @@ def minsizeYYY(event, context):
 
     """ Update AutoScalingGroup """
     try:
-        client.update_auto_scaling_group(AutoScalingGroupName = 'jl-pro-group-spot', MinSize = YYY, DesiredCapacity = YYY)
+        client.update_auto_scaling_group(AutoScalingGroupName = 'jl-pro-group-spot', MinSize = <VAL2>, DesiredCapacity = <VAL2>)
     except: 
         print('Update AutoScalingGroup Error')
         return 1
