@@ -14,14 +14,6 @@
 
 [機能]
  - AWS-LambdaのCron機能を利用して、AutoScalingGroupの起動台数を調整する
-
-[スクリプトを使用する前に]
- - このまま実行するとエラーになります
- - 以下の箇所を修正する必要があります
-   - <VAL1>/<VAL2>... 変更したい台数
-   - <Region>... Region識別子
-   - <AutoScalingGroup>... AutoScalingGroup名
- - 関数を追加した場合はコピーする
 """
 
 __authour__ = "masaru.kawabata"
