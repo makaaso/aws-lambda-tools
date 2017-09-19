@@ -5,8 +5,6 @@ aws-lambda-tools/autoscaling-adjust-size
 
 * AWS-Lambdaに登録して指定したAutoScalingGroupのMinSizeとDesiredSizeを調整する
 
-#### 前提条件
-
 * AWS-Lambdaが使用できること
 * boto3
 
@@ -33,4 +31,5 @@ pip install boto3 -t ./
 cd ../
 zip -r ./autoscaling-adjust-size.zip ./autoscaling-adjust-size
 ```
+
 
